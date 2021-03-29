@@ -19,7 +19,7 @@ function cambio()
 {
 
 message = new Paho.MQTT.Message("ENCENDER");
-message.destinationName= "julyvelasco19@gmail.com/test1";
+message.destinationName= "julyvelasco19@gmail.com/led1";
 
 client.send(message);
 
@@ -33,7 +33,7 @@ else
 
 message = new Paho.MQTT.Message("APAGAR");
 
-message.destinationName= "julyvelasco19@gmail.com/test1";
+message.destinationName= "julyvelasco19@gmail.com/led1";
 
 client.send(message);
 
@@ -72,7 +72,7 @@ contador=0;
 	
     client.subscribe("julyvelasco19@gmail.com/test");
     message = new Paho.MQTT.Message("hola desde la web");
-    message.destinationName = "julyvelasco19@gmail.com/test1";
+    message.destinationName = "julyvelasco19@gmail.com/led1";
     client.send(message);
 	
   }
@@ -94,92 +94,7 @@ contador=0;
     console.log("onMessageArrived:"+message.payloadString);
   }
   
-Lista de mensajes
-tired winnie the pooh GIF by good-night (im... de MARCO VINICIO SANCHEZ CULLAY
 
-MARCO VINICIO SANCHEZ CULLAY25/3 23:03
-
-26 de marzo de 2021
-enviame el link mijo de JULISA DAMARIS VELASCO AUCAPI�A
-
-JULISA DAMARIS VELASCO AUCAPI�A
-26/3 10:51
-enviame el link mijo
-hubo embebidos o no  de JULISA DAMARIS VELASCO AUCAPI�A
-
-JULISA DAMARIS VELASCO AUCAPI�A26/3 10:52
-hubo embebidos o no 
-Mensaje de MARCO VINICIO SANCHEZ CULLAY
-
-MARCO VINICIO SANCHEZ CULLAY
-26/3 10:52
-https://cedia.zoom.us/j/82592864154
-Vista previa de URL para Join our Cloud HD Video Meeting
-Join our Cloud HD Video Meeting
-Zoom is the leader in modern enterprise video communications, with an easy, reliable cloud platform for video and audio conferencing, chat, and webinars across mobile, desktop, and room systems. Zo...
-
-cedia.zoom.us
-estaba resolviendo dudas de MARCO VINICIO SANCHEZ CULLAY
-
-MARCO VINICIO SANCHEZ CULLAY26/3 10:52
-estaba resolviendo dudas
-Mensaje de MARCO VINICIO SANCHEZ CULLAY
-
-MARCO VINICIO SANCHEZ CULLAY
-26/3 10:57
-http://servidor-marco.herokuapp.com/
-entra  a mi web  y mira si funciona  de MARCO VINICIO SANCHEZ CULLAY
-
-MARCO VINICIO SANCHEZ CULLAY26/3 10:58
-entra  a mi web  y mira si funciona 
-si funca jajajaj de JULISA DAMARIS VELASCO AUCAPI�A
-
-JULISA DAMARIS VELASCO AUCAPI�A
-26/3 11:10
-si funca jajajaj
-WTF    de MARCO VINICIO SANCHEZ CULLAY
-
-MARCO VINICIO SANCHEZ CULLAY
-26/3 11:10
-WTF   
-me asuste  xq se predio mi led  en el esp32 de MARCO VINICIO SANCHEZ CULLAY
-
-MARCO VINICIO SANCHEZ CULLAY26/3 11:11
-me asuste  xq se predio mi led  en el esp32
-jaajajaj q andaras haciendo  de JULISA DAMARIS VELASCO AUCAPI�A
-
-JULISA DAMARIS VELASCO AUCAPI�A
-26/3 11:11
-jaajajaj q andaras haciendo 
-me avisas lo que sea aun no acabo de cocina... de JULISA DAMARIS VELASCO AUCAPI�A
-
-JULISA DAMARIS VELASCO AUCAPI�A26/3 11:12
-me avisas lo que sea aun no acabo de cocinar no ha nadie en mi casa pilassss
-veo q  con el link  de nuestro web podemos ... de MARCO VINICIO SANCHEZ CULLAY
-
-MARCO VINICIO SANCHEZ CULLAY
-26/3 11:13
-veo q  con el link  de nuestro web podemos  controlar el esp32  desde cualquier lugar jajaaj
-de uma  ahi te aviso  de MARCO VINICIO SANCHEZ CULLAY
-
-MARCO VINICIO SANCHEZ CULLAY26/3 11:13
-de uma  ahi te aviso 
-jajajaja no se q hablas jajajaaj de JULISA DAMARIS VELASCO AUCAPI�A
-
-JULISA DAMARIS VELASCO AUCAPI�A
-26/3 11:20
-jajajaja no se q hablas jajajaaj
-Nada nada jajajja de MARCO VINICIO SANCHEZ CULLAY
-
-MARCO VINICIO SANCHEZ CULLAY
-26/3 11:23
-Nada nada jajajja
-Hoy
-Leído por última vez
-var btn = document . getElementById ( 'bt... de MARCO VINICIO SANCHEZ CULLAY
-
-MARCO VINICIO SANCHEZ CULLAY
-12:27
 var btn=document.getElementById('btn'),contador=0;
 
 function cambio()
@@ -190,7 +105,7 @@ function cambio()
 
 message = new Paho.MQTT.Message("ENCENDER");
 
-message.destinationName= "marco08580212@gmail.com/test1";
+message.destinationName= "marco08580212@gmail.com/led1";
 
 client.send(message);
 
@@ -204,7 +119,7 @@ else
 
 message = new Paho.MQTT.Message("APAGAR");
 
-message.destinationName= "marco08580212@gmail.com/test1";
+message.destinationName= "marco08580212@gmail.com/led1";
 
 client.send(message);
 
@@ -213,7 +128,7 @@ contador=0;
 }
 
 }
-// called when a message arrives function ... de MARCO VINICIO SANCHEZ CULLAY
+// called when a message arrives function ... de Julisa Velasco
 
 MARCO VINICIO SANCHEZ CULLAY
 12:33
