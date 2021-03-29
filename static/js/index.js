@@ -105,7 +105,7 @@ function cambio()
 
 message = new Paho.MQTT.Message("ENCENDER");
 
-message.destinationName= "marco08580212@gmail.com/led1";
+message.destinationName= "julyvelasco19@gmail.com/led1";
 
 client.send(message);
 
@@ -119,7 +119,7 @@ else
 
 message = new Paho.MQTT.Message("APAGAR");
 
-message.destinationName= "marco08580212@gmail.com/led1";
+message.destinationName= "julyvelasco19@gmail.com/led1";
 
 client.send(message);
 
