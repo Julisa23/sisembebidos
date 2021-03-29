@@ -16,31 +16,19 @@
 var btn=document.getElementById('btn'),contador=0;
 function cambio()
 { if (contador==0)
-         {
-
-         message = new Paho.MQTT.Message("ENCENDER");
-         message.destinationName= "julyvelasco19@gmail.com/led1";
-
-         client.send(message);
-
-         contador=1;
-
-         }
-
- else
-
-         {
-
-         message = new Paho.MQTT.Message("APAGAR");
-
-         message.destinationName= "julyvelasco19@gmail.com/led1";
-
-         client.send(message);
-
-         contador=0;
-
-         }
-
+	{
+	message = new Paho.MQTT.Message("ENCENDER");
+	message.destinationName= "julyvelasco19@gmail.com/led1";
+	client.send(message);
+	contador=1;
+	}
+else
+	{
+	message = new Paho.MQTT.Message("APAGAR");
+	message.destinationName= "julyvelasco19@gmail.com/led1";
+	client.send(message);
+	contador=0;
+	}
 }
 
 
