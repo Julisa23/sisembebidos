@@ -130,38 +130,45 @@ contador=0;
 }
 // called when a message arrives function ... de Julisa Velasco
 
-MARCO VINICIO SANCHEZ CULLAY
-12:33
+function onConnectionLost(responseObject){
+
+    if (responseObject.errorCode!== 0) {
+
+        console.log("onConnectionLost:"+responseObject.errorMessage);
+
+    }
+
+}
 // called when a message arrives
 
-function onMessageArrived(message){
+ function onMessageArrived(message){
 
-console.log("onMessageArrived:"+message.payloadString);
+   console.log("onMessageArrived:"+message.payloadString);
 
 //comando para poner el sensor desde esp32
 
-document.getElementById("sensor").innerHTML=message.payloadString;
+        document.getElementById("sensor").innerHTML=message.payloadString;
 
-if(message.payloadString==='Encendido'){
+        if(message.payloadString==='Encendido'){
 
-document.getElementById("imagen").src="http://www.clker.com/cliparts/M/h/R/9/8/H/red-led-on-md.png";
+             document.getElementById("imagen").src="http://www.clker.com/cliparts/M/h/R/9/8/H/red-led-on-md.png";
 
-} else if(message.payloadString==='Apagado'){
+        } else if(message.payloadString==='Apagado'){
 
-document.getElementById("imagen").src="http://www.clker.com/cliparts/D/M/r/s/n/P/led-red-off-md.png";
+             document.getElementById("imagen").src="http://www.clker.com/cliparts/D/M/r/s/n/P/led-red-off-md.png";
 
 
 
-}
+        }
 
-if(message.payloadString==='Encendido'){
+         if(message.payloadString==='Encendido'){
 
-document.getElementById("btn").innerHTML="Apagar";
+             document.getElementById("btn").innerHTML="Apagar";
 
-} else if(message.payloadString==='Apagado'){
+        } else if(message.payloadString==='Apagado'){
 
-document.getElementById("btn").innerHTML="Encender";
+             document.getElementById("btn").innerHTML="Encender";
 
-}
+        }
 
 }
