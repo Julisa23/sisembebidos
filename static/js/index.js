@@ -5,7 +5,7 @@ function LED1_On() {
 	console.log("led on");
 	//document.getElementById("sensor").innerHTML="led on";
   	message = new Paho.MQTT.Message("ENCENDER");
-	message.destinationName = "julyvelaso19@gmail.com/tema1";
+	message.destinationName = "julyvelasco19@gmail.com/tema1";
 	client.send(message);
 }
 function LED1_Off(){	
@@ -13,7 +13,7 @@ function LED1_Off(){
 	console.log("led off");
 	//document.getElementById("sensor").innerHTML="led off";
 	message = new Paho.MQTT.Message("APAGAR");
-	message.destinationName = "julyvelaso19@gmail.com/tema1";
+	message.destinationName = "julyvelasco19@gmail.com/tema1";
 	client.send(message);
 }
 */
@@ -26,14 +26,14 @@ function cambio()
 { if (contador==0)
 	{
 	message = new Paho.MQTT.Message("ENCENDER");
-	message.destinationName = "julyvelaso19@gmail.com/test1";
+	message.destinationName = "julyvelasco19@gmail.com/test1";
 	client.send(message);
 	contador=1;
 	}
  else
 	{
 	message = new Paho.MQTT.Message("APAGAR");
-	message.destinationName = "julyvelaso19@gmail.com/test1";
+	message.destinationName = "julyvelasco19@gmail.com/test1";
 	client.send(message);
 	contador=0;
 	}
@@ -44,7 +44,7 @@ var btn=document.getElementById('btn');
   function intercambio()
   { 
       message = new Paho.MQTT.Message("HISTORIAL");
-      message.destinationName = "julyvelaso19@gmail.com/test1";
+      message.destinationName = "julyvelasco19@gmail.com/test1";
       client.send(message);
     
       }
@@ -63,8 +63,8 @@ var btn=document.getElementById('btn');
   client.onMessageArrived = onMessageArrived;
   var options = {
    useSSL: false,
-    userName: "julyvelaso19@gmail.com",
-    password: "julyvelaso19",
+    userName: "julyvelasco19@gmail.com",
+    password: "julyvelasco19",
     onSuccess:onConnect,
     onFailure:doFail
   }
@@ -77,9 +77,9 @@ var btn=document.getElementById('btn');
     // Once a connection has been made, make a subscription and send a message.
     console.log("Conectado...");
 	
-    client.subscribe("julyvelaso19@gmail.com/led");
+    client.subscribe("julyvelasco19@gmail.com/test");
     message = new Paho.MQTT.Message("hola desde la web");
-    message.destinationName = "julyvelaso19@gmail.com/test";
+    message.destinationName = "julyvelasco19@gmail.com/test1";
     client.send(message);
 	
   }
