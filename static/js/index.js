@@ -44,7 +44,7 @@ var btn=document.getElementById('btn');
   function intercambio()
   { 
       message = new Paho.MQTT.Message("HISTORIAL");
-      message.destinationName = "julyvelasco19@gmail.com/test1";
+      message.destinationName = "julyvelasco19@gmail.com/test";
       client.send(message);
     
       }
@@ -79,7 +79,7 @@ var btn=document.getElementById('btn');
 	
     client.subscribe("julyvelasco19@gmail.com/test");
     message = new Paho.MQTT.Message("hola desde la web");
-    message.destinationName = "julyvelasco19@gmail.com/test1";
+    message.destinationName = "julyvelasco19@gmail.com/test";
     client.send(message);
 	
   }
