@@ -1,122 +1,43 @@
 //https://www.eclipse.org/paho/clients/js/
-/*
-function LED1_On() {
-	//alert("led on");
-	console.log("led on");
-	//document.getElementById("sensor").innerHTML="led on";
-  	message = new Paho.MQTT.Message("ENCENDER");
-	message.destinationName = "juantixi99@gmail.com/tema1";
-	client.send(message);
-}
-function LED1_Off(){	
-	//alert("led off");
-	console.log("led off");
-	//document.getElementById("sensor").innerHTML="led off";
-	message = new Paho.MQTT.Message("APAGAR");
-	message.destinationName = "julyvelasco19@gmail.com/tema1";
-	client.send(message);
-}
-*/
-// nueva funcion intercambio()
-
-
-/*
-var btn=document.getElementById('btn'), contador=0;
-function cambio()
-{ if (contador==0)
-	{
-	message = new Paho.MQTT.Message("ENCENDER");
-	message.destinationName = "julyvelasco19@gmail.com/test1";
-	client.send(message);
-	contador=1;
-	}
- else
-	{
-	message = new Paho.MQTT.Message("APAGAR");
-	message.destinationName = "julyvelasco19@gmail.com/test1";
-	client.send(message);
-	contador=0;
-	}
-}
-// fin de nueva funcion intercambio()
-*/
-var btn=document.getElementById('btn');
-  function intercambio()
-  { 
-      message = new Paho.MQTT.Message("historial");
-      message.destinationName = "julyvelasco19@gmail.com/test2";
-      client.send(message);
-    
-      }
+// funciones para botones
+// función LED1_On () {
+	// alerta ("led encendido");
+	//console.log("led on ");
+// mensaje = nuevo Paho.MQTT.Message ("ON"); va
+  // message.destinationName = "julyvelasco19@gmail.com/test1";
+    // client.send (mensaje);
 	
-
-
-
-
-// Create a client instance
-  //client = new Paho.MQTT.Client("postman.cloudmqtt.com", 14970);
+	//document.getElementById("sensor").innerHTML="led on ";
   
-  client = new Paho.MQTT.Client("maqiatto.com", 8883, "web_" + parseInt(Math.random() * 100, 10));
+//}
+// función LED1_Off () {	
+	// alerta ("led apagado");
+	//console.log("led off ");
+// mensaje = nuevo Paho.MQTT.Message ("OFF");
+ // message.destinationName = "julyvelasco19@gmail.com/test1";
+  // client.send (mensaje);
+	//document.getElementById("sensor").innerHTML="led off ";
+//}
 
-  // set callback handlers
-  client.onConnectionLost = onConnectionLost;
-  client.onMessageArrived = onMessageArrived;
-  var options = {
-   useSSL: false,
-    userName: "julyvelasco19@gmail.com",
-    password: "julyvelasco19",
-    onSuccess:onConnect,
-    onFailure:doFail
-  }
+// funcion para encender y apagar led con un solo botón
 
-  // connect the client
-  client.connect(options);
-   
-  // called when the client connects
-  function onConnect() {
-    // Once a connection has been made, make a subscription and send a message.
-    console.log("Conectado...");
-	
-    client.subscribe("julyvelasco19@gmail.com/test");
-    message = new Paho.MQTT.Message("hola desde la web");
-    message.destinationName = "julyvelasco19@gmail.com/test1";
-    client.send(message);
-	
-  }
-
-  function doFail(e){
-    console.log(e);
-	
-  }
-
-  // called when the client loses its connection
-  function onConnectionLost(responseObject) {
-    if (responseObject.errorCode !== 0) {
-      console.log("onConnectionLost:"+responseObject.errorMessage);
-    }
-  }
-
- // called when a message arrives
-  function onMessageArrived(message) {
-    console.log("onMessageArrived:"+message.payloadString);
-	document.getElementById("sensor").innerHTML=message.payloadString; 
-	if(message.payloadString==='informacion'){
-		document.getElementById("sensor").innerHTML=message.payloadString;	 
-	} 
+var  btn = documento . getElementById ( 'btn' ) ,  contador = 0 ;
+función  cambio ( )
+{  si  ( contador == 0 )
+	{
+	mensaje  =  nueva  Paho . MQTT . Mensaje ( "ENCENDER" ) ;
+	mensaje . destinationName  =  "julyvelasco19@gmail.com/test1" ;
+	cliente . enviar ( mensaje ) ;
+	contador = 1 ;
 	}
-	  
-	  /*
-	  //comando para poner el sensor desde esp32
-	  document.getElementById("sensor").innerHTML=message.payloadString;
-	  if(message.payloadString==='Encendido'){
-		 document.getElementById("imagen").src="http://www.clker.com/cliparts/M/h/R/9/8/H/red-led-on-md.png";
-	  } else if(message.payloadString==='Apagado'){
-		 document.getElementById("imagen").src="http://www.clker.com/cliparts/D/M/r/s/n/P/led-red-off-md.png";
- 		
-	  }
-	  if(message.payloadString==='Encendido'){
-	  	document.getElementById("btn").innerHTML="Apagar";
-	  } else if(message.payloadString==='Apagado'){
-		document.getElementById("btn").innerHTML="Encender";
-	  }
-	  */
+ demás
+	{
+	mensaje  =  nueva  Paho . MQTT . Mensaje ( "APAGAR" ) ;
+	mensaje . destinationName  =  "julyvelasco19@gmail.com/test1" ;
+	cliente . enviar ( mensaje ) ;
+	contador = 0 ;
+	}
+}
+// Crea una instancia de cliente
+  // cliente = nuevo Paho.MQTT.Client ("postman.cloudmqtt.com", 14970);
+  
